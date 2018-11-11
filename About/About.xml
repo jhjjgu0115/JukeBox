@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+	<name>JukeBox</name>
+	<author>NukaFrog GloomyLynx </author>
+	<targetVersion>1.0.0</targetVersion>
+<description>
+Add JukeBox
+
+How to use JukeBox
+
+1. Go to steam workshop content folder.
+If you've installed it in a different drive, change the drive to match it.
+C:\Program Files (x86)\SteamLibrary\steamapps\workshop\content\294100\1558635181
+
+2. open \Sounds\Songs Folder and remove All sample Songs
+3. Just put in new songs here.
+
+Warning: Don't put in song while the game is running.
+</description>
+</ModMetaData>
