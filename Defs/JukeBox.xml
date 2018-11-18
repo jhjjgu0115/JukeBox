@@ -45,9 +45,6 @@
 		<passability>PassThroughOnly</passability>
 		<size>(1,1)</size>
 		<defaultPlacingRot>South</defaultPlacingRot>
-		<researchPrerequisites>
-			<li>FlatscreenTelevision</li>
-		</researchPrerequisites>
 		<constructionSkillPrerequisite>8</constructionSkillPrerequisite>
 		<building>
 			<joyKind>JoyKind_ListenSong</joyKind>

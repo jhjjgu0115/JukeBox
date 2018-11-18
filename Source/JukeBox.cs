@@ -268,6 +268,8 @@ namespace JukeBox
                 {
                     SongEntry songDef = new SongEntry(@"Songs/" + s);
                     songDef.tense = true;
+                    songDef.allowedTimeOfDay = TimeOfDay.Any;
+                    songDef.allowedSeasons = Enum.GetValues(typeof(Season)).Cast<Season>().ToList();
                     customSongList.Add(songDef);
                 }
                 if(customSongList.Count<=0)
