@@ -267,12 +267,19 @@ namespace JukeBox
                 foreach (string s in files)
                 {
                     SongEntry songDef = new SongEntry(@"Songs/" + s);
-                    songDef.tense = true;
-                    songDef.allowedTimeOfDay = TimeOfDay.Any;
-                    songDef.allowedSeasons = Enum.GetValues(typeof(Season)).Cast<Season>().ToList();
+                    songDef.tense = false;
+                    songDef.playOnMap = true;
                     customSongList.Add(songDef);
                 }
-                if(customSongList.Count<=0)
+                foreach (string s in files)
+                {
+                    SongEntry songDef = new SongEntry(@"Songs/" + s);
+                    songDef.defName = songDef.defName + "_tense";
+                    songDef.playOnMap = true;
+                    songDef.tense = true;
+                    customSongList.Add(songDef);
+                }
+                if (customSongList.Count<=0)
                 {
                     customSongList.AddRange(DefDatabase<SongDef>.AllDefs);
                 }
@@ -310,8 +317,6 @@ namespace JukeBox
                 this.defName = array[array.Length - 1];
             }
             clip = this.clip = ContentFinder<AudioClip>.Get(this.clipPath, true);
-            playOnMap = true;
-
         }
         public override void PostLoad()
         {
